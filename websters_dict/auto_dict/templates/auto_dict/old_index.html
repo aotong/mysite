@@ -1,0 +1,32 @@
+  <!DOCTYTE html>
+  <html>
+	<head>
+      <meta charset="utf-8">
+      <title>Tony Tong | Designer</title>
+    </head>
+    <body>  
+      <header>
+        <a href="index.html">
+          <h1>Tony Tong</h1>
+          <h2>Designer</h2>
+        </a>
+        <nav>
+         <ul>
+          <li>Portfolio</li>
+  	  <li>About</li>
+	  <li>Contact</li>
+        </nav>
+      </header>  
+	  <section>
+	    <form action="{% url 'auto_dict:index' %}" method="post">
+               {% csrf_token %}
+	       <input type="text" name="word" id="info">
+	       <input type="submit" name="">
+            </form>
+	  <section>
+	  <footer>
+        <p>&copy; 2017 Tony Tong Pettit</p>
+        The word is {{ word }} - the definition is -  {{ definition }}
+      </footer>
+     </body>
+<html>
